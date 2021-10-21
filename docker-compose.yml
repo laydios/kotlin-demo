@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  kotlin-demo:
+    container_name: kotlin-demo
+    image: demo/kotlin-demo:${TAG}
+    environment:
+      - TZ=Asia/Seoul
+      - JAR_NAME=${JAR_NAME}
+      - JAR_VERSION=${JAR_VERSION}
+    ports:
+      - "8080:7180"
+    restart: always
