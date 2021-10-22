@@ -1,2 +1,6 @@
 server:
   port: 7180
+
+logging:
+  level:
+    root: info
