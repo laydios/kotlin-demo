@@ -1,5 +1,6 @@
 package com.iron.kotlin.demo
 
+import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -7,5 +8,8 @@ import org.springframework.boot.runApplication
 class DemoApplication
 
 fun main(args: Array<String>) {
-	runApplication<DemoApplication>(*args)
+	var context = runApplication<DemoApplication>(*args) {
+		setDefaultProperties(hashMapOf("spring.profiles.default" to "dev") as Map<String, Any>?)
+	}
+	SpringApplication.exit(context)
 }

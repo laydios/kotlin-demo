@@ -1,6 +1,16 @@
-server:
-  port: 7180
+#server:
+#  port: 7180
 
 logging:
   level:
-    root: info
+    root: INFO
+    com.iron.kotlin.demo : INFO
+
+demo:
+  event:
+    subscribe:
+      sqs:
+        enabled: true
+        url: urlString
+        region: regionString
+        queue: queueString
